@@ -1,0 +1,126 @@
+:root{
+    --color: yellow;
+    --shadow-one: #919100;
+    --shadow-two: #555500;
+}
+
+.notes-container{
+    width: 100%;
+}
+
+.notes-container header{
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+.notes-container header img{
+    height: 45px;
+}
+
+.notes-container .content-header{
+    width: 100%;
+    max-width: 1100px;
+    margin: 30px auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.notes-container .content-header #btn-create{
+    width: 170px;
+    height: 35px;
+    border: 1px solid #bdbdbd;
+    border-radius: 15px;
+    background-color: transparent;
+    font-weight: bold;
+    color: #bdbdbd;
+    transition: background-color 0.3s;
+}
+
+.notes-container .content-header #btn-create:hover{
+    cursor: pointer;
+    background-color: #666666;
+}
+
+.notes-container .content-body{
+    width: 100%;
+    max-width: 1100px;
+    margin: 60px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 60px;
+}
+
+.notes-container .content-body .note{
+    width: 300px;
+    height: 300px;
+    background: var(--color);
+    position: relative;
+}
+
+.notes-container .content-body .note .btns{
+    display: flex;
+    float: right;
+}
+
+.notes-container .content-body .note .btns .btn{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 0px;
+    margin-right: 5px;
+}
+
+.notes-container .content-body .note .btns span{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.notes-container .content-body .note .content{
+    padding: 15px;
+    margin-top: 25px;
+}
+
+.notes-container .content-body .note .content .note-title{
+    background-color: transparent;
+    border: 0px;
+    font-size: 30px;
+    font-weight: bold;
+    width: 270px;
+}
+
+.notes-container .content-body .note .content .note-content{
+    background-color: transparent;
+    border: 0px;
+    margin-top: 20px;
+    width: 270px;
+    height: 160px;
+    resize: none;
+}
+
+.notes-container .content-body .note .cut{
+    border-top: 30px solid var(--shadow-one);
+    border-right: 30px solid var(--shadow-two);
+    width: 0px;
+    float: right;
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    transition: all 0.2s;
+}
+
+.notes-container .content-body .note .cut:hover{
+    border-top: 40px solid var(--shadow-one);
+    border-right: 40px solid var(--shadow-two);
+}
+
+.notes-container .content-body .show{
+    display: none;
+    font-size: 14px;
+    font-weight: bold;
+    bottom: 12px;
+    right: 45px;
+    position: absolute;
+}
